@@ -402,7 +402,7 @@ form.sign-in-form {
 }
 
 
-a.btn {
+.login button {
   display: flex;
   width: 140px;
   background-color: #d4af37;
