@@ -19,8 +19,8 @@ function login() {
 	if (user){
 		//user is signed in.
 		
-		document.getElementById("user_div").style.display = "initial";
-		document.getElementById("main-div").style.display = "none";
+		document.getElementById("sign-up-form").style.display = "initial";
+		document.getElementById("sign-in-form").style.display = "none";
 
 
 		var user = firebase.auth().currentUser;
@@ -34,13 +34,14 @@ function login() {
 	else{
 		//No user is signed in.
 
-		document.getElementById("user_div").style.display = "none";
-		document.getElementById("login_div").style.display = "initial";
+		document.getElementById("sign-up-form").style.display = "none";
+		document.getElementById("sign-in-form").style.display = "initial";
 	}
 });
 
 	var userEmail = document.getElementById("email_field").value;
 	var userPass = document.getElementById("password_field").value;
+	var userID = document.getElementById("user_field").value;
 
 firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
 		//handle Errors here.
