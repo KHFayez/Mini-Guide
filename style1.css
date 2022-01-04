@@ -418,3 +418,10 @@ form.sign-in-form {
   text-decoration:none;
   font-size: 100%;
 }
+
+.loggedin-div {
+    display: none;
+    width: 20%;
+    margin-top: 150px;
+    padding: 20px;
+}

@@ -14,19 +14,27 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="./dashboard.html" class="sign-in-form">
+          <form action="" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="user" id="user_field" />
+              <input type="text" placeholder="Email..."  />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password..." />
             </div>
-            <div class= "login">
+
+           <div id="login_div" class= "Login">
                 <button on click="login()">Login</button>
-            </div>
+           </div>
+
+           <div id="user_div" class="loggedin-div">
+            <h3> Welcome User</h3>
+            <p id="user_para">Welcome to Mini Guide</p>
+            <button onclick="logout()"> Logout</button>
+           </div>
+
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
