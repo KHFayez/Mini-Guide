@@ -13,15 +13,14 @@ sign_in_btn.addEventListener("click", () => {
 
 
 
-
 function login() {
 
 	firebase.auth() .onAuthStateChanged(function(user){
 	if (user){
 		//user is signed in.
 		
-		document.getElementById("user_div").style.display = "block";
-		document.getElementById("login_div").style.display = "none";
+		document.getElementById("user_div").style.display = "initial";
+		document.getElementById("main-div").style.display = "none";
 
 
 		var user = firebase.auth().currentUser;
@@ -36,12 +35,13 @@ function login() {
 		//No user is signed in.
 
 		document.getElementById("user_div").style.display = "none";
-		document.getElementById("login_div").style.display = "block";
+		document.getElementById("login_div").style.display = "initial";
 	}
 });
 
 	var userEmail = document.getElementById("email_field").value;
 	var userPass = document.getElementById("password_field").value;
+	var userName = document.getElementById("user_field").value;
 
 firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
 		//handle Errors here.
@@ -52,9 +52,4 @@ firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(e
 		//...
 });
 
-}
-
-function logout(){
-	firebase.auth().signOut();
-	}
 }
