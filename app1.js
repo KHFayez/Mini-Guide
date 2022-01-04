@@ -53,3 +53,7 @@ firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(e
 });
 
 }
+
+function logout(){
+	firebase.auth().signOut();
+}
